@@ -13,4 +13,4 @@ HOST_PORT=1443
 ## 配置文件放到 config目录
 
 
-docker run -d --name $CONTAINER_NAME -p $HOST_PORT:$CONTAINER_PORT -v $(pwd)/config:/etc/nginx/conf.d $IMAGE_NAME
+docker run -d --link php:php --name $CONTAINER_NAME -p $HOST_PORT:$CONTAINER_PORT -v $(pwd)/config:/etc/nginx/conf.d $IMAGE_NAME
